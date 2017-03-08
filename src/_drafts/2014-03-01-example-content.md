@@ -70,7 +70,7 @@ condimentum nibh, ut fermentum massa.
 Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna
 mollis ornare vel eu leo. Donec sed odio dui.
 
-{% gist 5555251 gist.md %}
+
 
 Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
 Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
