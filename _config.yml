@@ -16,7 +16,7 @@ author:
   name: Eric Tonussi
   email: eric@tonussi.com
   uri: tonussi.com
-  bio: I&#39;m a front-end developer
+  bio: I'm a front-end developer
   twitter:
   github:
 
@@ -45,7 +45,6 @@ highlighter: rouge
 # Extending Jekyll
 gems:
   - jekyll-feed
-  - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
