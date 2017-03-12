@@ -97,6 +97,7 @@ gulp.task('serve', (done) => {
   browserSync.init({
     // tunnel: true,
     // open: false,
+    notify: false,
     server: ['.tmp', 'dist']
   });
   done();

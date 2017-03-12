@@ -1,0 +1,170 @@
+.site-header {
+  line-height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  // padding: 10px 0;
+
+  background-color: transparent;
+  transition: line-height 0.4s, background-color 0.4s;
+
+  body.shrink-nav & {
+    background-color: $background-color;
+  }
+
+  body:not(.shrink-nav) & {
+    line-height: 70px;
+  }
+
+  @include max(xs) {
+    // padding: 0 10px;
+    // body:not(.home) & {
+    //   background-color: $background-color;
+    // }
+  }
+
+  @include min(xs) {
+    // line-height: 70px;
+  }
+
+  .site-nav {
+    float: right;
+    // display: inline-block;
+  }
+
+  .menu-icon {
+    @include min(xs) {
+      display: none;
+    }
+
+    margin: 0;
+    outline: none;
+
+    text-align: center;
+    // vertical-align: middle;
+
+    appearance: none;
+    // background: #ccc;
+    // border: 1px solid;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+
+    &:before {
+      // content: "a";
+      // font-family: "kave-icons";
+      font-size: 20px;
+      line-height: 30px;
+      // vertical-align: baseline;
+      color: #fff;
+      body.shrink-nav & {
+        color: #333;
+      }
+    }
+
+    &:checked {
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "b";
+        color: #333;
+      }
+      & + .page-links {
+        // display: block;
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+  }
+
+  .page-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .page-link > a {
+    }
+
+    @include max(xs) {
+      // display: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(255,255,255,.95);
+      z-index: 0;
+      padding-top: 50px;
+
+      .page-link > a {
+        display: block;
+        color: #333;
+        // padding: 0 15px;
+        text-align: center;
+      }
+    }
+
+    @include min(xs) {
+      // margin-top: 20px;
+
+      > .page-link {
+        display: inline-block;
+        a {
+          color: #fff;
+          padding: 10px 0px;
+          margin: 0 15px;
+          text-transform: uppercase;
+          font-size: 14px;
+
+          &:hover {
+            border-bottom: 2px solid;
+          }
+
+          body.shrink-nav & {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// logo
+.site-title svg {
+  width: auto;
+  height: 35px;
+  margin: 0 0 2px;
+  vertical-align: middle;
+
+  @include min(xs) {
+    height: 40px;
+    // margin: 10px 0;
+  }
+
+  [fill] {
+    transition: fill .4s;
+  }
+
+  body:not(.shrink-nav) & {
+
+    [fill="#2D1613"],
+    [fill="#0E2136"] {
+      fill: #fff;
+    }
+    [fill="#4F2D29"],
+    #pause1 {
+      fill: transparent;
+    }
+    [fill="#244D72"] {
+      fill: #CED0D3;
+    }
+
+  }
+}
