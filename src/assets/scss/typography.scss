@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700');
+
+.-super-big {
+  font-size: 40px;
+  @include min(xs) {
+    font-size: 60px;
+  }
+  @include min(md) {
+    font-size: 80px;
+  }
+  @include min(lg) {
+    font-size: 120px;
+  }
+}
+
+.-super-small {
+  font-size: 10px;
+}
+.-small {
+  font-size: 12px;
+}
+
+.-upper-case {
+  text-transform: uppercase;
+}
+
+.-weight-700 {
+  font-weight: 700;
+}
+
+.-spaced {
+  letter-spacing: 2px;
+}
+.-super-spaced {
+  letter-spacing: 5px;
+}

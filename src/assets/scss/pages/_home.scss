@@ -1,21 +1,74 @@
 body.home {
-  background-color: #252525 !important;
+  // background-color: #252525 !important;
   padding-top: 0px;
 
-  section {
-    height: 100vh;
+  &:not(.shrink-nav) .site-header {
+    background-color: transparent;
+    line-height: 70px;
+
+    @include min(xs) {
+      .page-link a {
+        color: #fff;
+      }
+    }
+
+    svg {
+      [fill="#2D1613"],
+      [fill="#0E2136"] {
+        fill: #fff;
+      }
+
+      [fill="#4F2D29"],
+      #pause1 {
+        fill: transparent;
+      }
+
+      [fill="#244D72"] {
+        fill: #CED0D3;
+      }
+
+    }
   }
 
-  section:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: red;
-    background-image: url(http://www.themezaa.com/html/h-code/images/slider-img42.jpg);
+
+  .presentation {
+    @include vcenter;
+    @include full-height;
+
+    // background-color: #252525;
+    // opacity: 0.9;
+
+    background-image: url(../images/home-bg@0,25x.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
+
+    @include min(md) {
+      background-image: url(../images/home-bg@0,5x.jpg);
+    }
+    @include min(lg) {
+      background-image: url(../images/home-bg@0,75x.jpg);
+    }
+
+    color: #fff;
+  }
+
+  // section:before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   // top: 0;
+  //   z-index: 1;
+  //   background-color: red;
+
+  //   opacity: 0.3;
+  // }
+
+  .title {
+    @extend .-super-big, .-upper-case, .-weight-700, .-spaced;
+  }
+
+  .description  {
+    @extend .-upper-case, .-super-spaced, .-small;
   }
 }
